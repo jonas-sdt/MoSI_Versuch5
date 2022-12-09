@@ -9,13 +9,19 @@
     R_Last = 1;     % [ohm] Lastwiderstand
     
 % Parameter zu Spannungsversorgung
-    U_e;            % [V]   Eingangs- bzw. Versorgungsspannung
-    i_e;            % [A]   Eingangsstrom
-    d;              %       Schaltgröße d
-    U = d* U_e;     % [V]   Eingangsgröße Ersatzschaltbild
+
+    % U_e;            % [V]   Eingangs- bzw. Versorgungsspannung
+    % i_e;            % [A]   Eingangsstrom
+    % d;              %       Schaltgröße d
+    % U = d* U_e;     % [V]   Eingangsgröße Ersatzschaltbild
+    % ^ Parameter werden im Modell berechnet ^
+
+    u_vgl = 7.5;    % [V]   Vergleichswert für Spannungsschaltung
+
+
 
 % Erweiterung um Verlustmechanismen
-    R_VD;           % [ohm] Durchlassverluste
-    R_VS            % [ohm] Sperrverluste
+    % R_VD;           % [ohm] Durchlassverluste
+    % R_VS            % [ohm] Sperrverluste
     
-    R_V = d*R_VD + (1-d)*R_VS; % [ohm]Verlustwiderstand
+    % R_V = d*R_VD + (1-d)*R_VS; % [ohm]Verlustwiderstand
