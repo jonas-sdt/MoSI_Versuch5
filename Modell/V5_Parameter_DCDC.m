@@ -11,7 +11,7 @@
 
     % U_e;            % [V]   Eingangs- bzw. Versorgungsspannung
     % i_e;            % [A]   Eingangsstrom
-    % d;              %       Schaltgröße d
+    d = 1;            %       Schaltgröße d
     % U = d* U_e;     % [V]   Eingangsgröße Ersatzschaltbild
     % ^ Parameter werden im Modell berechnet ^
 
@@ -20,10 +20,13 @@
 
 
 % Erweiterung um Verlustmechanismen
-    % R_VD;           % [ohm] Durchlassverluste
-    % R_VS = 0;       % [ohm] Sperrverluste
+    R_VD = -61.600625;          % [ohm] Durchlassverluste Birnchen 1
+    R_VD2 = -13.170875;         % [ohm] Durchlassverluste Birnchen 2
+
+    R_VS = 1;                   % [ohm] Sperrverluste Birnchen 1
+    R_VS2= 1;                   % [ohm] Sperrverluste Birnchen 2
     
-    % R_V = d*R_VD + (1-d)*R_VS; % [ohm]Verlustwiderstand
+    R_V = d*R_VD + (1-d)*R_VS;  % [ohm]Verlustwiderstand
 
 % R_Last
     % Ausgangsspannungen gemäß Tabelle 5.7 Spalte 2, zweite Zeile des Arrays Widerstandswerte gemäß 5.7 Spalte 3
